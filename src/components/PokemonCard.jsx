@@ -2,7 +2,7 @@ export default function PokemonCard() {
     const pokemon = pokemonList[0];
     return (
         <figure>
-            {pokemon.imgSrc !== undefined ? <img src={pokemon.imgSrc} alt={pokemon.imgSrc} /> : <p>???</p>}
+            {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.imgSrc} /> : <p>???</p>}
             <figcaption>{pokemon.name}</figcaption>
         </figure>
     );
