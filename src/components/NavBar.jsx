@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-export default function NavBar({ setPokemonIndex, pokemonIndex, pokemonList }) {
+export default function NavBar({ setPokemonIndex, pokemonList }) {
   return (
     <>
     {pokemonList.map((pokemon , index) => (
