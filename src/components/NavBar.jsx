@@ -1,22 +1,16 @@
+/* eslint-disable react/prop-types */
 export default function NavBar({ setPokemonIndex, pokemonIndex, pokemonList }) {
   return (
     <>
-      {pokemonIndex > 0 && (
+    {pokemonList.map((pokemon , index) => (
         <button
+          key={index}
           type="button"
-          onClick={() => setPokemonIndex((pokemonIndex) => pokemonIndex - 1)}
+          onClick={ () => setPokemonIndex(index)}
         >
-          Précédent
+          {pokemon.name}
         </button>
-      )}
-      {pokemonIndex < pokemonList.length - 1 && (
-        <button
-          type="button"
-          onClick={() => setPokemonIndex((pokemonIndex) => pokemonIndex + 1)}
-        >
-          Suivant
-        </button>
-      )}
+      ))}
     </>
   );
 }
